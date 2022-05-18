@@ -118,4 +118,11 @@ module.exports = {
     watchFiles: [path.resolve(__dirname, "src", frontendDirectory)],
     liveReload: true,
   },
+
+  // always add this new configuration after initialize new project of with dfx, to enable file watching on changes
+  watch: true,
+  watchOptions: {
+    aggregateTimeout: 200,
+    poll: 1000,
+  },
 };
